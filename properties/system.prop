@@ -4,6 +4,13 @@ persist.vendor.cne.feature=1
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
 
+# Power-saving props
+ro.vendor.use_data_netmgrd=true
+ro.vold.umsdirtyratio=20
+ro.ril.disable.power.collapse=0
+power.saving.mode=1
+pm.sleep_mode=1
+
 # QTI
 ro.vendor.qti.va_aosp.support=1
 
