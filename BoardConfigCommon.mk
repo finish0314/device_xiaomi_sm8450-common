@@ -65,6 +65,11 @@ TARGET_NO_BOOTLOADER := true
 TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED := true
 $(call soong_config_set, qtidisplay, use_ycrcb_camera_encode, true)
 
+# Dolby Vision
+SOONG_CONFIG_NAMESPACES += dolby_vision
+SOONG_CONFIG_dolby_vision += enabled
+SOONG_CONFIG_dolby_vision_enabled := true
+
 # Display
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE := false
