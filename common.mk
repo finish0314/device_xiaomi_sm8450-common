@@ -271,6 +271,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     DialerResXiaomi \
+    DeviceAsWebcamResXiaomi \
     FrameworksResTarget \
     FrameworksResUdfpsSensor \
     FrameworksResXiaomi \
