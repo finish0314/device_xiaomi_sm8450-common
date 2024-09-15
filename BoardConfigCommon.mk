@@ -64,6 +64,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Camera
 TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED := true
+$(call soong_config_set, qtidisplay, use_ycrcb_camera_encode, true)
 
 # Display
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
