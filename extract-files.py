@@ -92,15 +92,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libgrpc++_unsecure.so', 'libgrpc++_unsecure_prebuilt.so'
         ),
-    (
-       'vendor/etc/media_codecs_cape.xml',
-       'vendor/etc/media_codecs_diwali_v0.xml',
-       'vendor/etc/media_codecs_diwali_v1.xml',
-       'vendor/etc/media_codecs_diwali_v2.xml',
-       'vendor/etc/media_codecs_taro.xml',
-       'vendor/etc/media_codecs_ukee.xml',
-    ): blob_fixup()
-        .regex_replace('.+media_codecs_(google_audio|google_c2|google_telephony|vendor_audio).+\n', ''),
+    'vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy': blob_fixup()
+        .add_line_if_missing('setsockopt: 1'),
     'vendor/etc/vintf/manifest/c2_manifest_vendor.xml': blob_fixup()
         .regex_replace('.+dolby.+\n', ''),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
