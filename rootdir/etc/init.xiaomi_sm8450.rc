@@ -112,7 +112,8 @@ on post-fs-data
 on property:sys.boot_completed=1
     # Set thermal mode to mgame
     write /sys/devices/virtual/thermal/thermal_message/sconfig 20
-
+    # Set restricted cpuset to the same CPUs as system-background
+    copy /dev/cpuset/system-background/cpus /dev/cpuset/restricted/cpus
     # Setup foreground cpuset for display composer.
     write /dev/cpuset/foreground/cpus 0-6
     # Set background cpuset
