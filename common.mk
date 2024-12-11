@@ -144,7 +144,8 @@ PRODUCT_COPY_FILES += \
 
 # Dolby
 PRODUCT_PACKAGES += \
-    XiaomiDolby
+    XiaomiDolby \
+    XiaomiDolbyOverlay
 
 # DRM
 PRODUCT_PACKAGES += \
