@@ -310,6 +310,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 
+# QMI
+PRODUCT_PACKAGES += \
+    libvndfwk_detect_jni.qti_vendor:64 # Needed by CNE app
+
 # Recovery
 PRODUCT_PACKAGES += \
     fastbootd
