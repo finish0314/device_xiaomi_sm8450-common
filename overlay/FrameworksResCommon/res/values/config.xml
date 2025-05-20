@@ -324,4 +324,8 @@
 
     <!-- Whether to select voice/data/sms preference without user confirmation -->
     <bool name="config_voice_data_sms_auto_fallback">true</bool>
+    <!-- Volume panel position in portrait mode
+         0: Left side (default)
+         1: Right side -->
+    <integer name="config_volumePanelPosPortDefault">1</integer>
 </resources>
