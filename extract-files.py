@@ -45,6 +45,7 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.diaghal@1.0',
         'vendor.qti.hardware.wifidisplaysession@1.0',
         'com.qualcomm.qti.dpm.api@1.0',
+        'vendor.qti.hardware.fm@1.0',
     ): lib_fixup_vendor_suffix,
     (
         'libagm',
