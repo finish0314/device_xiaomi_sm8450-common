@@ -10,6 +10,8 @@ include vendor/xiaomi/sm8450-common/BoardConfigVendor.mk
 COMMON_PATH := device/xiaomi/sm8450-common
 
 # A/B
+AB_OTA_UPDATER := true
+
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
@@ -109,7 +111,8 @@ BOARD_VENDOR_RAMDISK_FRAGMENT.dlkm.KERNEL_MODULE_DIRS := top
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     disable_dma32=on \
-    mtdoops.fingerprint=$(LINEAGE_VERSION)
+    irqaffinity=0-3 \
+    mtdoops.fingerprint=$(SUN_VERSION)
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
@@ -181,7 +184,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
--include vendor/lineage/config/BoardConfigReservedSize.mk
+-include vendor/sun/config/BoardConfigReservedSize.mk
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
@@ -225,7 +228,7 @@ $(call soong_config_set, xiaomiSm8450SensorVars, extensionLibs, $(TARGET_SENSOR_
 $(call soong_config_set, XIAOMI_TOUCH, HIGH_TOUCH_POLLING_PATH, /sys/devices/virtual/touch/touch_dev/bump_sample_rate)
 
 # VINTF
-DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
+DEVICE_MATRIX_FILE := device/qcom/common/compatibility_matrix.xml
 
 DEVICE_MANIFEST_SKUS := taro diwali cape ukee
 $(foreach sku, $(call to-upper, $(DEVICE_MANIFEST_SKUS)), \
@@ -242,9 +245,9 @@ $(foreach nfc_sku, $(call to-upper, $(TARGET_NFC_SUPPORTED_SKUS)), \
 endif
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
+    vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/sun/config/device_framework_matrix.xml
 
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(COMMON_PATH)/vintf/framework_manifest.xml
 
