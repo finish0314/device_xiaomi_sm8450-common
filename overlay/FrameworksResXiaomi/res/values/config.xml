@@ -226,4 +226,10 @@
     <!-- Default refresh rate in the zone defined by brightness and ambient thresholds.
          If non-positive, then the refresh rate is unchanged even if thresholds are configured. -->
     <integer name="config_defaultRefreshRateInZone">120</integer>
+    
+    <!-- List of string types for the secondary light sensor. The secondarg light sensor is 
+         typically located on the back or side of the devices -->
+     <string-array name="config_secondaryLightSensorStringTypes">
+              <item> xiaomi.sensor.back_lux</item>
+     </string-array>
 </resources>
