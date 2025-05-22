@@ -19,7 +19,7 @@ android_app {
     privileged: true,
 
     static_libs: [
-        "org.lineageos.settings.resources",
+        "com.android.parts.resources",
     ],
 
     optimize: {
