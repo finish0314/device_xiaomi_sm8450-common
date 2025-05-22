@@ -26,6 +26,7 @@ namespace_imports = [
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/dataservices',
+    'vendor/qcom/common/system/av',
 ]
 
 
@@ -46,6 +47,12 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.wifidisplaysession@1.0',
         'com.qualcomm.qti.dpm.api@1.0',
         'vendor.qti.hardware.fm@1.0',
+        'vendor.display.color@1.0',
+        'vendor.display.color@1.1',
+        'vendor.display.color@1.2',
+        'vendor.display.color@1.3',
+        'vendor.display.postproc@1.0',
+        'vendor.qti.qspmhal@1.0',
     ): lib_fixup_vendor_suffix,
     (
         'libagm',

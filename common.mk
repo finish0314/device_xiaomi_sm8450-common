@@ -326,6 +326,20 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti_vendor:64 # Needed by CNE app
 
+# QTI
+TARGET_COMMON_QTI_COMPONENTS := \
+    alarm \
+    audio \
+    av \
+    bt \
+    display \
+    gps \
+    init \
+    overlay \
+    perf \
+    sepolicy \
+    wfd
+
 # Recovery
 PRODUCT_PACKAGES += \
     fastbootd
