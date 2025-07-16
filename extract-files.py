@@ -53,6 +53,7 @@ lib_fixups: lib_fixups_user_type = {
         'libats',
         'liblx-osal',
         'libpalclient',
+        'libwpa_client',
     ): lib_fixup_remove,
 }
 
