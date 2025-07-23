@@ -22,3 +22,9 @@ allow hal_mlipay_default vendor_dmabuf_qseecom_ta_heap_device:chr_file { ioctl o
 get_prop(hal_mlipay_default, vendor_fp_prop)
 get_prop(hal_mlipay_default, vendor_system_prop)
 set_prop(hal_mlipay_default, vendor_payment_security_prop)
+
+allow system_app vendor_fp_prop:file { read open getattr };
+allow system_app vendor_payment_security_prop:file { read open getattr };
+allow system_app hal_mlipay_hwservice:hwservice_manager find;
+allow untrusted_app proc_pid_max:file { read open getattr };
+allow system_app hal_mlipay_default:binder call;
