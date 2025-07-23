@@ -1,0 +1,4 @@
+# Lineage HALs
+hal_attribute_sun(lineage_health)
+hal_attribute_sun(lineage_touch)
+hal_attribute_sun(lineage_powershare)

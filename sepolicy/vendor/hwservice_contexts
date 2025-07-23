@@ -15,5 +15,13 @@ com.fingerprints.extension::IFingerprintSensorTest u:object_r:vendor_hal_fingerp
 com.fingerprints.extension::IFingerprintCalibration u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
 com.fingerprints.extension::IFingerprintOptical u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
 
+# Lineage Touch
+vendor.lineage.touch::IGloveMode                                        u:object_r:hal_lineage_touch_hwservice:s0
+vendor.lineage.touch::IHighTouchPollingRate                             u:object_r:hal_lineage_touch_hwservice:s0
+vendor.lineage.touch::IKeyDisabler                                      u:object_r:hal_lineage_touch_hwservice:s0
+vendor.lineage.touch::IKeySwapper                                       u:object_r:hal_lineage_touch_hwservice:s0
+vendor.lineage.touch::IStylusMode                                       u:object_r:hal_lineage_touch_hwservice:s0
+vendor.lineage.touch::ITouchscreenGesture                               u:object_r:hal_lineage_touch_hwservice:s0
+
 # Mlipay
 vendor.xiaomi.hardware.mlipay::IMlipayService u:object_r:hal_mlipay_hwservice:s0
